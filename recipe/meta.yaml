@@ -1,0 +1,43 @@
+{% set name = "bloomberg-data-api-client" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bloomberg-data-api-client-{{ version }}.tar.gz
+  sha256: 4d3d13899fb2363aff75b47d7d1e196a42429135e9602026ce11df454d986111
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install --no-deps --no-deps --no-build-isolation . -vv
+  number: 0
+
+requirements:
+  host:
+    - python >=3.7
+    - setuptools >=61.0
+    - pip
+  run:
+    - python >=3.7
+
+test:
+  imports:
+    - bloomberg_data_api_client
+  commands:
+    - pip check
+  requires:
+    - pip
+
+#about:
+#  license: ''
+#  license_file: PLEASE_ADD_LICENSE_FILE
+
+extra:
+    anaconda-services:
+      ref:  https://anaconda.zendesk.com/agent/tickets/38602
+      reason: "Requested by customer"
+    recipe-maintainers:
+      - anaobi
+      - bradley
