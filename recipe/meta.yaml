@@ -28,8 +28,8 @@ test:
 #    - bloomberg_data_api_client
   commands:
     - pip check
-#  requires:
-#    - pip
+  requires:
+    - pip
 
 #about:
 #  license: ''
