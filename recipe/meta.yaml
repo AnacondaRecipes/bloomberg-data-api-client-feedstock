@@ -24,8 +24,9 @@ requirements:
     - python >=3.7
 
 test:
-#  imports:
-#    - bloomberg_data_api_client
+  imports:
+    - bloomberg-data-api-client
+
   commands:
     - pip check
   requires:
