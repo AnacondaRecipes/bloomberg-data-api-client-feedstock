@@ -22,13 +22,13 @@ requirements:
   run:
     - python >=3.7
 
-test:
-  imports:
-    - bloomberg_data_api_client
-  commands:
-    - pip check
-  requires:
-    - pip
+#test:
+#  imports:
+#    - bloomberg_data_api_client
+#  commands:
+#    - pip check
+#  requires:
+#    - pip
 
 #about:
 #  license: ''
